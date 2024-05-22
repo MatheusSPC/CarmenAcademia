@@ -124,6 +124,9 @@ private final Connection c;
         stmt.close();
         return sists;
    }
-
+   
+   public void chamada(){
+       
+   }
     
 }
