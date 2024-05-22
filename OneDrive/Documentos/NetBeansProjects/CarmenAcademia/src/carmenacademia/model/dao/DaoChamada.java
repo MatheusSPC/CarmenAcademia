@@ -5,6 +5,7 @@
 package carmenacademia.model.dao;
 
 import carmenacademia.model.bean.Chamada;
+import carmenacademia.model.bean.Aluno;
 import carmenacademia.util.ConexaoDb;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -102,7 +103,7 @@ private final Connection c;
         // usus: array armazena a lista de registros
         List<Chamada> sists = new ArrayList<>();
         
-        String sql = "select * from Chamadas where horario like ?";
+        String sql = "select * from Chamadas where idMatricula like ?";
         PreparedStatement stmt = this.c.prepareStatement(sql);
         // seta os valores
         stmt.setString(1,"%" + sisEnt.getData()+ "%");
@@ -123,12 +124,7 @@ private final Connection c;
         rs.close();
         stmt.close();
         return sists;
-   }
-   
-   public void chamada(){
-       
-   }
-    
+   } 
 }
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

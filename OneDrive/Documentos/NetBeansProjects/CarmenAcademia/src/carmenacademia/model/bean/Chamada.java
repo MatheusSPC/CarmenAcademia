@@ -14,6 +14,7 @@ public class Chamada {
     private boolean presente;
     private String data;
     private Matricula matricula;
+    private Aluno aluno;
 
     public Chamada(int idChamada, int idMatricula, boolean presente, String data) {
         this.idChamada = idChamada;
@@ -34,6 +35,14 @@ public class Chamada {
 
     public Chamada(String data) {
         this.data = data;
+    }
+    
+    public Chamada(Aluno aluno){
+        this.aluno = aluno;
+    }
+
+    public Aluno getAluno() {
+        return aluno;
     }
     
     

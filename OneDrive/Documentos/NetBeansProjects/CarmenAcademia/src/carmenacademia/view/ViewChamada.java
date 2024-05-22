@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class ViewChamada {
     
     public static void menu() throws SQLException, ClassNotFoundException {
-        String msg = " 1 - Inserir \n 2 - Alterar \n 3 - buscar \n 4 - excluir \n 5 - Listar " ;
+        String msg = " 1 - Inserir \n 2 - Alterar \n 3 - buscar \n 4 - excluir \n 5 - Listar" ;
         int num = Integer.parseInt(JOptionPane.showInputDialog(msg));
         switch (num) {
             case 1:
@@ -80,7 +80,7 @@ public class ViewChamada {
     }
 
     private static void listar() throws SQLException, ClassNotFoundException {
-        String data = JOptionPane.showInputDialog("HORARIO");
+        String data = JOptionPane.showInputDialog("NOME");
         Chamada usuEnt = new Chamada(data);
         ControllerChamada contUsu = new ControllerChamada();
         List<Chamada> listaUsuario = contUsu.listar(usuEnt);
@@ -90,6 +90,4 @@ public class ViewChamada {
 
         }
     }
-
-
 }

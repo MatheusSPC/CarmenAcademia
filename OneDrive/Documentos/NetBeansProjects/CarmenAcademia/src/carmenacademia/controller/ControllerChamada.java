@@ -5,6 +5,7 @@
 package carmenacademia.controller;
 
 import carmenacademia.model.bean.Chamada;
+import carmenacademia.model.bean.Aluno;
 import carmenacademia.model.bean.Matricula;
 import carmenacademia.model.dao.DaoChamada;
 import java.sql.SQLException;
@@ -60,6 +61,5 @@ public class ControllerChamada {
             listaInstruario.add(buscar(usuSis));
         }
         return listaInstruario;
-     }
-    
+     }  
 }
