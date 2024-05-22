@@ -42,9 +42,10 @@ public class ViewChamada {
 
     private static void inserir() throws SQLException, ClassNotFoundException {
         int idMatricula = Integer.parseInt(JOptionPane.showInputDialog("ID DA MATRICULA"));
+        int idAluno = Integer.parseInt(JOptionPane.showInputDialog("ID DO ALUNO"));
         boolean presente = Boolean.parseBoolean(JOptionPane.showInputDialog("PRESENTE"));
         String data = JOptionPane.showInputDialog("DATA");
-        Chamada usuEnt = new Chamada(idMatricula, presente, data);
+        Chamada usuEnt = new Chamada(idMatricula, idAluno, presente, data,"");
         ControllerChamada contUsu = new ControllerChamada();
         Chamada usuSaida = contUsu.inserir(usuEnt);
         JOptionPane.showMessageDialog(null,usuSaida.toString());
@@ -68,6 +69,7 @@ public class ViewChamada {
         Chamada usuSaida = contUsu.buscar(usuEnt);
         JOptionPane.showMessageDialog(null,usuSaida.toString());
         JOptionPane.showMessageDialog(null,usuSaida.getMatricula().toString());
+        JOptionPane.showMessageDialog(null,usuSaida.getAluno().toString());
 
     }
 
@@ -80,14 +82,13 @@ public class ViewChamada {
     }
 
     private static void listar() throws SQLException, ClassNotFoundException {
-        String data = JOptionPane.showInputDialog("NOME");
+        String data = JOptionPane.showInputDialog("DATA DA CHAMADA");
         Chamada usuEnt = new Chamada(data);
         ControllerChamada contUsu = new ControllerChamada();
         List<Chamada> listaUsuario = contUsu.listar(usuEnt);
         for (Chamada usuSaida : listaUsuario) {
             JOptionPane.showMessageDialog(null,usuSaida.toString());
             JOptionPane.showMessageDialog(null,usuSaida.getMatricula().toString());
-
         }
     }
 }

@@ -62,15 +62,16 @@ private final Connection c;
    }
 
     public Chamada inserir(Chamada sisEnt) throws SQLException{
-        String sql = "insert into Chamadas" + " (idMatricula, presente, dataChamada)" + " values (?,?,?)";
+        String sql = "insert into Chamadas" + " (idMatricula, idAluno, presente, dataChamada)" + " values (?,?,?,?)";
     
         // prepared statement para inserção
         PreparedStatement stmt = c.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
 
         // seta os valores
         stmt.setInt(1,sisEnt.getIdMatricula());
-        stmt.setBoolean(2,sisEnt.isPresente());
-        stmt.setString(3,sisEnt.getData());
+        stmt.setInt(2,sisEnt.getIdAluno());
+        stmt.setBoolean(3,sisEnt.isPresente());
+        stmt.setString(4,sisEnt.getData());
 
         // executa
         stmt.executeUpdate();
@@ -103,7 +104,7 @@ private final Connection c;
         // usus: array armazena a lista de registros
         List<Chamada> sists = new ArrayList<>();
         
-        String sql = "select * from Chamadas where idMatricula like ?";
+        String sql = "select * from Chamadas where dataChamada like ?";
         PreparedStatement stmt = this.c.prepareStatement(sql);
         // seta os valores
         stmt.setString(1,"%" + sisEnt.getData()+ "%");

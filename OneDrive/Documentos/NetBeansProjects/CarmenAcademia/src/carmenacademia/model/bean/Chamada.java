@@ -10,7 +10,7 @@ package carmenacademia.model.bean;
  */
 public class Chamada {
     
-    private int idChamada, idMatricula;
+    private int idChamada, idMatricula, idAluno;
     private boolean presente;
     private String data;
     private Matricula matricula;
@@ -29,6 +29,14 @@ public class Chamada {
         this.data = data;
     }
 
+    public Chamada(int idMatricula, int idAluno, boolean presente, String data, String m) {
+        this.idMatricula = idMatricula;
+        this.idAluno = idAluno;
+        this.presente = presente;
+        this.data = data;
+    }
+    
+
     public Chamada(int idChamada) {
         this.idChamada = idChamada;
     }
@@ -43,6 +51,10 @@ public class Chamada {
 
     public Aluno getAluno() {
         return aluno;
+    }
+
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
     }
     
     
@@ -85,6 +97,14 @@ public class Chamada {
 
     public void setData(String data) {
         this.data = data;
+    }
+
+    public int getIdAluno() {
+        return idAluno;
+    }
+
+    public void setIdAluno(int idAluno) {
+        this.idAluno = idAluno;
     }
 
     

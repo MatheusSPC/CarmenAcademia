@@ -37,6 +37,7 @@ create table academia.Matriculas(
 create table academia.Chamadas (
   idChamada BIGINT NOT NULL AUTO_INCREMENT,
   idMatricula BIGINT NOT NULL,
+  idAluno BIGINT NOT NULL,
   presente BOOLEAN,
   dataChamada VARCHAR(255),
   primary key (idChamada));
@@ -47,3 +48,4 @@ ALTER TABLE academia.Matriculas ADD CONSTRAINT MATTUR FOREIGN KEY(idTurma) REFER
 ALTER TABLE academia.Matriculas ADD CONSTRAINT MATALU FOREIGN KEY(idAluno) REFERENCES academia.Alunos(codigoDaMatricula);
 
 ALTER TABLE academia.Chamadas ADD CONSTRAINT CHAMAT FOREIGN KEY(idMatricula) REFERENCES academia.Matriculas(idMatricula);
+ALTER TABLE academia.Chamadas ADD CONSTRAINT CHALU FOREIGN KEY(idAluno) REFERENCES academia.Alunos(codigoDaMatricula);

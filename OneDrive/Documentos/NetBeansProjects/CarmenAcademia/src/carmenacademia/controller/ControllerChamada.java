@@ -20,6 +20,7 @@ public class ControllerChamada {
     
     DaoChamada daoComp;
     ControllerMatricula contInstru;
+    ControllerAluno contAlu;
 
     
 
@@ -43,6 +44,10 @@ public class ControllerChamada {
         Matricula usu = new Matricula(compSaida.getIdMatricula());
         contInstru = new ControllerMatricula();
         compSaida.setMatricula(contInstru.buscar(usu));
+        
+        Aluno alu = new Aluno(compSaida.getIdAluno());
+        contAlu = new ControllerAluno();
+        compSaida.setAluno(contAlu.buscar(alu));
         
         return compSaida;
     }
