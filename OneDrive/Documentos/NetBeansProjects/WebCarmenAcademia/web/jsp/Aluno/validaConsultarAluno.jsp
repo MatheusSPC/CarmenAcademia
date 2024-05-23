@@ -13,6 +13,7 @@
     Aluno sis = new Aluno(nome);
     ControllerAluno siscont = new ControllerAluno();
     List<Aluno> listaAluno = siscont.listar(sis);
+    String url = "PBUSCA=" + sis.getNome()+"&CODIGODAMATRICULA=" ;
 %>
 
 <!DOCTYPE html>
@@ -31,6 +32,8 @@
                   <th data-field="Telefone">Excluir</th>
                   <th data-field="Altura">Alterar</th>
                   <th data-field="Peso">Alterar</th>
+                  <th data-field="Excluir">Excluir</th>
+                  <th data-field="Alterar">Alterar</th>
               </tr>
             </thead>
             <% if (!(listaAluno.isEmpty())) { %>    
@@ -45,6 +48,9 @@
                             <td><%=sisSaida.getTelefone()%></td> 
                             <td><%=sisSaida.getAltura()%></td> 
                             <td><%=sisSaida.getPeso()%></td> 
+                            
+                            <td><a href="excluirSistema.jsp?<%=url + sisSaida.getCodigoDaMatricula()%>">Excluir</a></td>
+                            <td><a href="alterarSistema.jsp?<%=url + sisSaida.getCodigoDaMatricula()%>">Alterar</a></td>
                         </tr>
                     <% } %>
                 </tbody>
