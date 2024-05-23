@@ -9,14 +9,14 @@
 <!DOCTYPE html>
 <html>
     <%@include file="../../inc/materalizeWeb.inc" %>
-    <title>SISTEMA </title>
+    <title>SISTEMA</title>
 
     <body>
-
+        
         <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'>Manter Aluno</a>        
-        <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown3'>Manter Instrutor</a>   
-        <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown4'>Manter Turma</a> 
-        <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown5'>Manter Matricula</a>   
+        <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown2'>Manter Instrutor</a>   
+        <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown3'>Manter Turma</a> 
+        <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown4'>Manter Matricula</a>   
         <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown5'>Manter Chamada</a>  
         
         <ul id='dropdown1' class='dropdown-content'>
