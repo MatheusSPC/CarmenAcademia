@@ -26,8 +26,8 @@
        <h1>ALTERAR ALUNO</h1>
         <form name="alterarAluno" action="validaAlterarAluno.jsp" method="post">
             Nome: <input type="text" name="NOME" value="<%=sis.getNome()%>"> <br>
-            dataDaMatricula: <input type="text" name="DATADAMATRICULA" value="<%=sis.getDataDaMatricula()%>"> <br>
-            dataDeNascimento: <input type="text" name="DATADENASCIMENTO" value="<%=sis.getDataDeNascimento()%>"> <br>
+            Data Da Matricula: <input type="text" name="DATADAMATRICULA" value="<%=sis.getDataDaMatricula()%>"> <br>
+            Data De Nascimento: <input type="text" name="DATADENASCIMENTO" value="<%=sis.getDataDeNascimento()%>"> <br>
             Endereco: <input type="text" name="ENDERECO" value="<%=sis.getEndereco()%>"> <br>
             Telefone: <input type="text" name="TELEFONE" value="<%=sis.getTelefone()%>"> <br>
             Altura: <input type="text" name="ALTURA" value="<%=sis.getAltura()%>"> <br>

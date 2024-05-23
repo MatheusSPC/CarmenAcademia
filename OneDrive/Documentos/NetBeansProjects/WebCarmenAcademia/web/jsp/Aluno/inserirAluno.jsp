@@ -14,8 +14,8 @@
         <h1>INSERIR ALUNO</h1>
         <form name="inserirAluno" action="validaInserirAluno.jsp" method="post">
             Nome: <input type="text" name="NOME" value=""> <br>
-            DataDaMatricula: <input type="text" name="DATADAMATRICULA" value=""> <br>
-            DataDeNascimento: <input type="text" name="DATADENASCIMENTO" value=""> <br>
+            Data Da Matricula: <input type="text" name="DATADAMATRICULA" value=""> <br>
+            Data De Nascimento: <input type="text" name="DATADENASCIMENTO" value=""> <br>
             Endereco: <input type="text" name="ENDERECO" value=""> <br>
             Telefone: <input type="text" name="TELEFONE" value=""> <br>
             Altura: <input type="text" name="ALTURA" value=""> <br>
