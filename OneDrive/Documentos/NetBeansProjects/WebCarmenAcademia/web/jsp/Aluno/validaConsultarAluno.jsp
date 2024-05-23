@@ -49,8 +49,8 @@
                             <td><%=sisSaida.getAltura()%></td> 
                             <td><%=sisSaida.getPeso()%></td> 
                             
-                            <td><a href="excluirSistema.jsp?<%=url + sisSaida.getCodigoDaMatricula()%>">Excluir</a></td>
-                            <td><a href="alterarSistema.jsp?<%=url + sisSaida.getCodigoDaMatricula()%>">Alterar</a></td>
+                            <td><a href="excluirAluno.jsp?<%=url + sisSaida.getCodigoDaMatricula()%>">Excluir</a></td>
+                            <td><a href="alterarAluno.jsp?<%=url + sisSaida.getCodigoDaMatricula()%>">Alterar</a></td>
                         </tr>
                     <% } %>
                 </tbody>
