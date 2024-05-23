@@ -25,9 +25,9 @@
        <div class="container"/>
        <h1>ALTERAR ALUNO</h1>
         <form name="alterarMatricula" action="validaAlterarMatricula.jsp" method="post">
-            Id Matricula <input type="text" name="Id Matricula" value="<%=sis.getIdMatricula()%>"> <br>
-            Id Turma <input type="text" name="Id Turma" value="<%=sis.getIdTurma()%>"> <br>
-            Id Aluno <input type="text" name="Id Aluno" value="<%=sis.getIdAluno()%>"> <br>
+            Id Matricula <input type="text" name="IDMATRICULA" value="<%=sis.getIdMatricula()%>"> <br>
+            Id Turma <input type="text" name="IDTURMA" value="<%=sis.getIdTurma()%>"> <br>
+            Id Aluno <input type="text" name="IDALUNO" value="<%=sis.getIdAluno()%>"> <br>
             <input type="HIDDEN" name="PBUSCA" value="<%=pbusca%>"> <br>
             <input type="submit" name="Enviar" value="OK">
         </form>

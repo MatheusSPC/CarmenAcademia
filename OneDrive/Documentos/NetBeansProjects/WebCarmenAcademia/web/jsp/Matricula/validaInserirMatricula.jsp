@@ -5,24 +5,24 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="carmenacademia.model.bean.Aluno"%>
-<%@page import="carmenacademia.controller.ControllerAluno"%>
+<%@page import="carmenacademia.model.bean.Matricula"%>
+<%@page import="carmenacademia.controller.ControllerMatricula"%>
 
 <!DOCTYPE html>
 
 <%
-    String nome = request.getParameter("NOME");
-    String dataDaMatricula = request.getParameter("SERVIDOR");
-    String dataDeNascimento = request.getParameter("STATUS");
-    String endereco = request.getParameter("VERSAO");
-    String telefone = request.getParameter("SERVIDOR");
-    String altura = request.getParameter("SERVIDOR");
-    String peso = request.getParameter("STATUS");
+    String cod = request.getParameter("IDMATRICULA");
+    int idMatricula = Integer.parseInt(cod);
+    String cod1 = request.getParameter("IDTURMA");
+    int idTurma = Integer.parseInt(cod1);
+    String cod2 = request.getParameter("IDALUNO");
+    int idAluno = Integer.parseInt(cod2);
 
-    Aluno sis = new Aluno(nome, dataDaMatricula, dataDeNascimento, endereco, telefone, altura, peso);
-    ControllerAluno siscont = new ControllerAluno();
+
+    Matricula sis = new Matricula(idMatricula, idTurma, idAluno);
+    ControllerMatricula siscont = new ControllerMatricula();
     siscont.inserir(sis);
     // REDIRECIONA PARA A PAG LOGIN.JSP
-    String url = "inserirAluno.jsp";
+    String url = "/WebCarmenAcademia/jsp/Menu/menu.jsp";
     response.sendRedirect(url);
 %>

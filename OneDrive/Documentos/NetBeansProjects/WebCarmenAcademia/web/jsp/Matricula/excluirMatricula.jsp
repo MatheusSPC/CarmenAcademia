@@ -5,13 +5,17 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<%@page import="carmenacademia.model.bean.Matricula"%>
+<%@page import="carmenacademia.controller.ControllerMatricula"%>
+
+<%
+    String cod = request.getParameter("IDMATRICULA");
+    int idMatricula = Integer.parseInt(cod);
+    Matricula sis = new Matricula(idMatricula);
+    ControllerMatricula usuCont = new ControllerMatricula();
+    usuCont.excluir(sis);
+    
+    // REDIRECIONA PARA A PAG LOGIN.JSP
+    String url = "/WebCarmenAcademia/jsp/Menu/menu.jsp";
+    response.sendRedirect(url);
+%>
