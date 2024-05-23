@@ -7,11 +7,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
+    <%@include file="../../inc/materalizeWeb.inc" %>
+    <title>CONSULTAR - ALUNO</title>
     <body>
-        <h1>Hello World!</h1>
+       <div class="container"/>
+       <h1>CONSULTAR ALUNO</h1>
+       <form name="consultarAluno" action="validaConsultarAluno.jsp" method="post">
+           NOME <input type="text" name ="NOME" value=""> <br>
+           <input type="submit" name ="Enviar" value="Enviar"> <br>
+       </form>
+       </div>
     </body>
 </html>
