@@ -24,14 +24,14 @@
         <table class="striped responsive-table">
             <thead>
               <tr>
-                  <th data-field="CodigoDaMatricula">Id</th>
+                  <th data-field="CodigoDaMatricula">CodigoDaMatricula</th>
                   <th data-field="Nome">Nome</th>
-                  <th data-field="DataDaMatricula">Servidor</th>
-                  <th data-field="DataDeNascimento">Status</th>
-                  <th data-field="Endereco">Versao</th>
-                  <th data-field="Telefone">Excluir</th>
-                  <th data-field="Altura">Alterar</th>
-                  <th data-field="Peso">Alterar</th>
+                  <th data-field="DataDaMatricula">DataDaMatricula</th>
+                  <th data-field="DataDeNascimento">DataDeNascimento</th>
+                  <th data-field="Endereco">Endereco</th>
+                  <th data-field="Telefone">Telefone</th>
+                  <th data-field="Altura">Altura</th>
+                  <th data-field="Peso">Peso</th>
                   <th data-field="Excluir">Excluir</th>
                   <th data-field="Alterar">Alterar</th>
               </tr>
