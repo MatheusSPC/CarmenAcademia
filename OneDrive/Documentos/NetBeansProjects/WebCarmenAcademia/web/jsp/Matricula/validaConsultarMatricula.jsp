@@ -9,11 +9,12 @@
 <%@page import="carmenacademia.controller.ControllerMatricula"%>
 
 <%
-    String cod = request.getParameter("IDMATRICULA");
-    int idMatricula = Integer.parseInt(cod);
-    Matricula sis = new Matricula(idMatricula);
+    String cod = request.getParameter("IDTURMA");
+    int idTurma = Integer.parseInt(cod);
+    Matricula sis = new Matricula(idTurma, "");
     ControllerMatricula siscont = new ControllerMatricula();
     List<Matricula> listaMatricula = siscont.listar(sis);
+    String url = "PBUSCA=" + sis.getIdMatricula()+"&IDMATRICULA=" ;
 %>
 
 <!DOCTYPE html>
@@ -24,9 +25,12 @@
         <table class="striped responsive-table">
             <thead>
               <tr>
-                  <th data-field="IDMATRICULA">Id</th>
-                  <th data-field="IDTURMA">Nome</th>
-                  <th data-field="IDALUNO">Servidor</th>
+                  <th data-field="IDMATRICULA">IDMATRICULA</th>
+                  <th data-field="IDTURMA">IDTURMA</th>
+                  <th data-field="IDALUNO">IDALUNO</th>
+                  
+                  <th data-field="Excluir">Excluir</th>
+                  <th data-field="Alterar">Alterar</th>
 
               </tr>
             </thead>
@@ -38,6 +42,9 @@
                             <td><%=sisSaida.getIdTurma()%></td>
                             <td><%=sisSaida.getIdAluno()%></td>
 
+                            
+                            <td><a href="excluirMatricula.jsp?<%=url + sisSaida.getIdMatricula()%>">Excluir</a></td>
+                            <td><a href="alterarMatricula.jsp?<%=url + sisSaida.getIdMatricula()%>">Alterar</a></td>
                         </tr>
                     <% } %>
                 </tbody>

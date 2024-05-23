@@ -12,14 +12,10 @@
     <body>
        <div class="container"/>
         <h1>INSERIR ALUNO</h1>
-        <form name="inserirAluno" action="validaInserirAluno.jsp" method="post">
-            Nome: <input type="text" name="NOME" value=""> <br>
-            DataDaMatricula: <input type="text" name="DATADAMATRICULA" value=""> <br>
-            DataDeNascimento: <input type="text" name="DATADENASCIMENTO" value=""> <br>
-            Endereco: <input type="text" name="ENDERECO" value=""> <br>
-            Telefone: <input type="text" name="TELEFONE" value=""> <br>
-            Altura: <input type="text" name="ALTURA" value=""> <br>
-            Peso: <input type="text" name="PESO" value=""> <br>
+        <form name="inserirAluno" action="validaInserirMatricula.jsp" method="post">
+            Matricula <input type="text" name="IDMATRICULA" value=""> <br>
+            Turma <input type="text" name="IDTURMA" value=""> <br>
+            Aluno <input type="text" name="IDALUNO" value=""> <br>
             <input type="submit" name="Enviar" value="OK">
         </form>
         </div>

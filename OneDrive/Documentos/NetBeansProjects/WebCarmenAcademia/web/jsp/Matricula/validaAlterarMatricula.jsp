@@ -9,7 +9,7 @@
 <%@page import="carmenacademia.controller.ControllerMatricula"%>
 
 <%
-    String cod = request.getParameter("ID");
+    String cod = request.getParameter("IDMATRICULA");
     int idMatricula = Integer.parseInt(cod);
     
     String cod1 = request.getParameter("IDTURMA");
@@ -20,9 +20,8 @@
 
     Matricula sis = new Matricula(idMatricula, idTurma, idAluno);
     ControllerMatricula siscont = new ControllerMatricula();
-    siscont.alterar(sis);
-    String pbusca = request.getParameter("PBUSCA");
+    siscont.alterar(sis);;
     // REDIRECIONA PARA A PAG LOGIN.JSP
-    String url = "validaConsultarAluno.jsp?NOME=" + pbusca;
+    String url = "/WebCarmenAcademia/jsp/Menu/menu.jsp";
     response.sendRedirect(url);
 %>
