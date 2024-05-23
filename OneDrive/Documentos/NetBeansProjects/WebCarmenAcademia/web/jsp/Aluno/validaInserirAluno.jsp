@@ -12,12 +12,12 @@
 
 <%
     String nome = request.getParameter("NOME");
-    String dataDaMatricula = request.getParameter("SERVIDOR");
-    String dataDeNascimento = request.getParameter("STATUS");
-    String endereco = request.getParameter("VERSAO");
-    String telefone = request.getParameter("SERVIDOR");
-    String altura = request.getParameter("SERVIDOR");
-    String peso = request.getParameter("STATUS");
+    String dataDaMatricula = request.getParameter("DATADAMATRICULA");
+    String dataDeNascimento = request.getParameter("DATADENASCIMENTO");
+    String endereco = request.getParameter("ENDERECO");
+    String telefone = request.getParameter("TELEFONE");
+    String altura = request.getParameter("ALTURA");
+    String peso = request.getParameter("PESO");
 
     Aluno sis = new Aluno(nome, dataDaMatricula, dataDeNascimento, endereco, telefone, altura, peso);
     ControllerAluno siscont = new ControllerAluno();
