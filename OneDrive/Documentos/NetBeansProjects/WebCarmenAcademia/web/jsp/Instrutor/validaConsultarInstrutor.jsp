@@ -14,7 +14,7 @@
     Instrutor sis = new Instrutor(nome);
     ControllerInstrutor siscont = new ControllerInstrutor();
     List<Instrutor> listaInstrutor = siscont.listar(sis);
-    String url = "PBUSCA=" + sis.getIdInstrutor()+"&NOME=" ;
+    String url = "PBUSCA=" + sis.getIdInstrutor()+"&IdInstrutor=" ;
 %>
 
 <!DOCTYPE html>
@@ -25,7 +25,7 @@
         <table class="striped responsive-table">
             <thead>
               <tr>
-                  <th data-field="Id">Id</th>
+                  <th data-field="IdInstrutor">IdInstrutor</th>
                   <th data-field="Nome">Nome</th>
                   <th data-field="rg">Rg</th>
                   <th data-field="DataNascimento">Data de Nascimento</th>

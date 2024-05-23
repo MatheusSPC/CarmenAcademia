@@ -15,6 +15,6 @@
     ControllerInstrutor usuCont = new ControllerInstrutor();
     usuCont.alterar(usu);
     // REDIRECIONA PARA A PAG LOGIN.JSP
-    String url = "validaConsultarInstrutor.jsp?RG=" + pbusca;
+    String url = "validaConsultarInstrutor.jsp?NOME=" + pbusca;
     response.sendRedirect(url);
 %>
