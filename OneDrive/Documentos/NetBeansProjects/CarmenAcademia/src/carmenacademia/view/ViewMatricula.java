@@ -52,7 +52,7 @@ public class ViewMatricula {
     private static void alterar() throws SQLException, ClassNotFoundException {
         int idMatricula = Integer.parseInt(JOptionPane.showInputDialog("ID DA TURMA"));
         int idTurma = Integer.parseInt(JOptionPane.showInputDialog("ID DO INSTRUTOR"));
-        int idAluno = Integer.parseInt(JOptionPane.showInputDialog("ID DO INSTRUTOR"));
+        int idAluno = Integer.parseInt(JOptionPane.showInputDialog("ID DO ALUNO"));
         Matricula usuEnt = new Matricula(idMatricula,idTurma, idAluno);
         ControllerMatricula contUsu = new ControllerMatricula();
         Matricula usuSaida = contUsu.alterar(usuEnt);

@@ -87,6 +87,7 @@ private final Connection c;
         // seta os valores
         stmt.setInt(1,sisEnt.getIdTurma());
         stmt.setInt(2,sisEnt.getIdAluno());
+        stmt.setInt(3,sisEnt.getIdMatricula());
 
         // executa
         stmt.execute();
@@ -98,7 +99,7 @@ private final Connection c;
         // usus: array armazena a lista de registros
         List<Matricula> sists = new ArrayList<>();
         
-        String sql = "select * from Matriculas where idTurma like ?";
+        String sql = "select * from matriculas where idTurma like ?";
         PreparedStatement stmt = this.c.prepareStatement(sql);
         // seta os valores
         stmt.setString(1,"%" + sisEnt.getIdTurma()+ "%");
@@ -110,7 +111,8 @@ private final Connection c;
             Matricula sis = new Matricula(
                 rs.getInt(1),
                 rs.getInt(2),
-                rs.getInt(3));
+                rs.getInt(3)
+            );
             // adiciona o sist à lista de sists
             sists.add(sis);
         }
