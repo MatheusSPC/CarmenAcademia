@@ -4,16 +4,17 @@
 
 <%
     String cod = request.getParameter("CODIGODOINSTRUTOR");
-    int id = Integer.parseInt(cod);
+    int codigoDaMatricula = Integer.parseInt(cod);
     String nome = request.getParameter("NOME");
     String rg = request.getParameter("RG");
-    String dataNascimento = request.getParameter("DATANASCIMENTO");
+    String dataDeNascimento = request.getParameter("DATADENASCIMENTO");
     String titulacao = request.getParameter("TITULACAO");
-    String pbusca = request.getParameter("PBUSCA");
+   
 
-    Instrutor usu = new Instrutor(id,nome,rg,dataNascimento,titulacao);
-    ControllerInstrutor usuCont = new ControllerInstrutor();
-    usuCont.alterar(usu);
+    Instrutor sis = new Instrutor(codigoDaMatricula, nome, rg,dataDeNascimento, titulacao);
+    ControllerInstrutor siscont = new ControllerInstrutor();
+    siscont.alterar(sis);
+    String pbusca = request.getParameter("PBUSCA");
     // REDIRECIONA PARA A PAG LOGIN.JSP
     String url = "validaConsultarInstrutor.jsp?NOME=" + pbusca;
     response.sendRedirect(url);

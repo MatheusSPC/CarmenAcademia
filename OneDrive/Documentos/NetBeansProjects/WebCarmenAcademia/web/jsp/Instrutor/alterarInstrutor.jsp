@@ -3,7 +3,6 @@
     Created on : 23 de mai. de 2024, 13:55:31
     Author     : ryanv
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="carmenacademia.model.bean.Instrutor"%>
 <%@page import="carmenacademia.controller.ControllerInstrutor"%>
@@ -26,9 +25,9 @@
        <h1>ALTERAR ALUNO</h1>
         <form name="alterarInstrutor" action="validaAlterarInstrutor.jsp" method="post">
             Nome: <input type="text" name="NOME" value="<%=sis.getNome()%>"> <br>
-            RG: <input type="text" name="ENDERECO" value="<%=sis.getRG()%>"> <br>
-            Data de Nascimento: <input type="text" name="DATADENASCIMENTO" value="<%=sis.getDataDeNascimento()%>"> <br>
-            Titulação: <input type="text" name="ENDERECO" value="<%=sis.getTitulacao()%>"> <br>
+            RG: <input type="text" name="RG" value="<%=sis.getRG()%>"> <br>
+            Data De Nascimento: <input type="text" name="DATADENASCIMENTO" value="<%=sis.getDataDeNascimento()%>"> <br>
+            Titulacao: <input type="text" name="TITULACAO" value="<%=sis.getTitulacao()%>"> <br>
             <input type="HIDDEN" name="CODIGODOINSTRUTOR" value="<%=sis.getIdInstrutor()%>"> <br>
             <input type="HIDDEN" name="PBUSCA" value="<%=pbusca%>"> <br>
             <input type="submit" name="Enviar" value="OK">

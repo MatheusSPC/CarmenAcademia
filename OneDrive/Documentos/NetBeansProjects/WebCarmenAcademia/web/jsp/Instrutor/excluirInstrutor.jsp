@@ -10,14 +10,14 @@
 <%@page import="carmenacademia.controller.ControllerInstrutor"%>
 
 <%
-    String cod = request.getParameter("IdInstrutor");
-    int id = Integer.parseInt(cod);
-    Instrutor usu = new Instrutor(id);
+    String cod = request.getParameter("CODIGODOINSTRUTOR");
+    int codigoDaMatricula = Integer.parseInt(cod);
+    Instrutor sis = new Instrutor(codigoDaMatricula);
     ControllerInstrutor usuCont = new ControllerInstrutor();
-    usuCont.excluir(usu);
+    usuCont.excluir(sis);
     String pbusca = request.getParameter("PBUSCA");
     
     // REDIRECIONA PARA A PAG LOGIN.JSP
-    String url = "validaConsultarInstrutor.jsp?IdInstrutor="+ pbusca;
+    String url = "validaConsultarInstrutor.jsp?NOME=" + pbusca;
     response.sendRedirect(url);
 %>
