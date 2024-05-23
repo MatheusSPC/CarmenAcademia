@@ -13,6 +13,7 @@
     Aluno sis = new Aluno(nome);
     ControllerAluno siscont = new ControllerAluno();
     List<Aluno> listaAluno = siscont.listar(sis);
+    String url = "PBUSCA=" + sis.getNome()+"&CODIGODAMATRICULA=" ;
 %>
 
 <!DOCTYPE html>
@@ -23,14 +24,16 @@
         <table class="striped responsive-table">
             <thead>
               <tr>
-                  <th data-field="CodigoDaMatricula">Id</th>
+                  <th data-field="CodigoDaMatricula">CodigoDaMatricula</th>
                   <th data-field="Nome">Nome</th>
-                  <th data-field="DataDaMatricula">Servidor</th>
-                  <th data-field="DataDeNascimento">Status</th>
-                  <th data-field="Endereco">Versao</th>
-                  <th data-field="Telefone">Excluir</th>
-                  <th data-field="Altura">Alterar</th>
-                  <th data-field="Peso">Alterar</th>
+                  <th data-field="DataDaMatricula">DataDaMatricula</th>
+                  <th data-field="DataDeNascimento">DataDeNascimento</th>
+                  <th data-field="Endereco">Endereco</th>
+                  <th data-field="Telefone">Telefone</th>
+                  <th data-field="Altura">Altura</th>
+                  <th data-field="Peso">Peso</th>
+                  <th data-field="Excluir">Excluir</th>
+                  <th data-field="Alterar">Alterar</th>
               </tr>
             </thead>
             <% if (!(listaAluno.isEmpty())) { %>    
@@ -45,6 +48,9 @@
                             <td><%=sisSaida.getTelefone()%></td> 
                             <td><%=sisSaida.getAltura()%></td> 
                             <td><%=sisSaida.getPeso()%></td> 
+                            
+                            <td><a href="excluirAluno.jsp?<%=url + sisSaida.getCodigoDaMatricula()%>">Excluir</a></td>
+                            <td><a href="alterarAluno.jsp?<%=url + sisSaida.getCodigoDaMatricula()%>">Alterar</a></td>
                         </tr>
                     <% } %>
                 </tbody>
