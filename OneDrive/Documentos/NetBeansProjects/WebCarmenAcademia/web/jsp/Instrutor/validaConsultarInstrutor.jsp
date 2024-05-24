@@ -60,7 +60,8 @@
 
             <div class="row">
                 <div class="col s12">
-                    <a href="/WebCarmenAcademia/jsp/Menu/menu.jsp" class="btn waves-effect waves-light right">Voltar ao Menu</a>
+                     <a href="javascript:history.go(-1);" class="btn waves-effect waves-light">Voltar</a>
+                    <a href="/WebCarmenAcademia/jsp/Menu/menu.jsp" class="btn waves-effect waves-light right red">Sair</a>
                 </div>
             </div>
         </div>
