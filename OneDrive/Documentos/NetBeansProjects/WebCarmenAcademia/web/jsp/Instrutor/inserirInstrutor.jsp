@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col s12">
                         <input type="submit" class="btn waves-effect waves-light" name="Enviar" value="OK">
-                        <a href="/WebCarmenAcademia/jsp/Menu/menu.jsp" class="btn waves-effect waves-light right">Voltar ao Menu</a>
+                        <a href="/WebCarmenAcademia/jsp/Menu/menu.jsp" class="btn waves-effect waves-light red right">Voltar ao Menu</a>
                     </div>
                 </div>
             </form>

@@ -15,22 +15,40 @@
     ControllerMatricula sisCont = new ControllerMatricula();
     sis = sisCont.buscar(sis);
     String pbusca = request.getParameter("PBUSCA");
-
 %>
 
 <html>
-    <%@include file="../../inc/materalizeWeb.inc" %>
+<%@include file="../../inc/materalizeWeb.inc" %>
+<head>
     <title>ALTERAR - ALUNO</title>
-    <body>
-       <div class="container"/>
-       <h1>ALTERAR ALUNO</h1>
+    <!-- Include Materialize CSS and JS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-align">ALTERAR MATRÍCULA</h1>
         <form name="alterarMatricula" action="validaAlterarMatricula.jsp" method="post">
-            Id Matricula <input type="text" name="IDMATRICULA" value="<%=sis.getIdMatricula()%>"> <br>
-            Id Turma <input type="text" name="IDTURMA" value="<%=sis.getIdTurma()%>"> <br>
-            Id Aluno <input type="text" name="IDALUNO" value="<%=sis.getIdAluno()%>"> <br>
-            <input type="HIDDEN" name="PBUSCA" value="<%=pbusca%>"> <br>
-            <input type="submit" name="Enviar" value="OK">
+            <div class="input-field">
+                <input type="text" name="IDMATRICULA" value="<%=sis.getIdMatricula()%>">
+                <label for="IDMATRICULA">ID Matrícula</label>
+            </div>
+            <div class="input-field">
+                <input type="text" name="IDTURMA" value="<%=sis.getIdTurma()%>">
+                <label for="IDTURMA">ID Turma</label>
+            </div>
+            <div class="input-field">
+                <input type="text" name="IDALUNO" value="<%=sis.getIdAluno()%>">
+                <label for="IDALUNO">ID Aluno</label>
+            </div>
+            <input type="hidden" name="PBUSCA" value="<%=pbusca%>">
+            <div class="row">
+                <div class="col s12">
+                    <button type="submit" class="btn waves-effect waves-light">OK</button>
+                    <a href="javascript:history.go(-1);" class="btn waves-effect waves-light red right">Cancelar</a>
+                </div>
+            </div>
         </form>
-        <div>
-    </body>
+    </div>
+</body>
 </html>
