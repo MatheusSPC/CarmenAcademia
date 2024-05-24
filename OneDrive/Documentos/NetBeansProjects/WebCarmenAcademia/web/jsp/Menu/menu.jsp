@@ -60,5 +60,9 @@
                 });
             });
         </script>
+        
+        <div class="image-container">
+            <img src="https://media.tenor.com/d7jgDuI-rjIAAAAi/sonic-the-hedgehog-sonic.gif" alt="Imagem">
+        </div>
     </body>
 </html>
