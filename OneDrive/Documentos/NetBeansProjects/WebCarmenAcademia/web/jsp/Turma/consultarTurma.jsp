@@ -19,8 +19,8 @@
             <form name="consultarTurma" action="validaConsultarTurma.jsp" method="post">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="text" id="turma" name="Turma" value="">
-                        <label for="turma">Turma</label>
+                        <input type="text" id="horario" name="horario" >
+                        <label for="horario">Horario</label>
                     </div>
                 </div>
                 <div class="row">

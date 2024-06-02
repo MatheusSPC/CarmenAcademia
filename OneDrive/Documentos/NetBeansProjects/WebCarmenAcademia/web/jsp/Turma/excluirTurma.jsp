@@ -10,7 +10,7 @@
 <%@page import="carmenacademia.controller.ControllerTurma"%>
 
 <%
-    String cod = request.getParameter("CODIGODATURMA");
+    String cod = request.getParameter("IdTurma");
     int codigoDaTurma = Integer.parseInt(cod);
     Turma sis = new Turma(codigoDaTurma);
     ControllerTurma sisCont = new ControllerTurma();
@@ -18,6 +18,6 @@
     String pbusca = request.getParameter("PBUSCA");
     
     // REDIRECIONA PARA A PAG LOGIN.JSP
-    String url = "validaConsultarTurma.jsp?NOME=" + pbusca;
+    String url = "validaConsultarTurma.jsp?horario=" + pbusca;
     response.sendRedirect(url);
 %>

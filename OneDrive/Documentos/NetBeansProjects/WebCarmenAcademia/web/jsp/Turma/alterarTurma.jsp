@@ -8,7 +8,7 @@
 <%@page import="carmenacademia.controller.ControllerTurma"%>
 
 <%
-    String cod = request.getParameter("IDTURMA");
+    String cod = request.getParameter("IdTurma");
     int IdTurma = Integer.parseInt(cod);
     Turma sis = new Turma(IdTurma);
     ControllerTurma sisCont = new ControllerTurma();
@@ -26,38 +26,47 @@
         <h1 class="center-align">ALTERAR TURMA</h1>
         <form name="alterarTurma" action="validaAlterarTurma.jsp" method="post">
             <div class="row">
-                   <div class="input-field col s12">
+                <div class="input-field col s12">
                        <input type="text" id="IdTurma" name="Turma" value="<%=sis.getIdTurma()%>">
                        <label for="IdTurma">TURMA</label>
-                   </div>
-               <div class="row">
-                   <div class="input-field col s12">
+                </div>
+                     <div class="row">
+                <div 
+                    class="input-field col s12">
                        <input type="text" id="IdInstrutor" name="Instrutor" value="<%=sis.getIdInstrutor()%>">
                        <label for="IdInstrutor">Instrutor</label>
-                   </div>
+                </div>
+                 </div> 
+
                 <div class="row">
-                   <div class="input-field col s12">
-                       <input type="text" id="horario" name="Horario" value="<%=sis.getHorario()%>">
+                <div class="input-field col s12">
+                       <input type="text" id="horario" name="horario" value="<%=sis.getHorario()%>">
                        <label for="horario">Horario</label>
-                   </div>
+                </div>
                </div>
                 <div class="row">
-                   <div class="input-field col s12">
-                       <input type="text" id="DataInicio" name="DataInicio" value="<%=sis.getDataInicio()%>">
-                       <label for="DataInicio">Data Inicio</label>
-                   </div>
+                <div class="input-field col s12">
+                       <input type="text" id="dataInicio" name="dataInicio" value="<%=sis.getDataInicio()%>">
+                       <label for="dataInicio">Data Inicio</label>
+                </div>
                </div>
                <div class="row">
-                   <div class="input-field col s12">
-                       <input type="text" id="DataFim" name="DataFim" value="<%=sis.getDataFim()%>">
-                       <label for="DataFim">Data Fim</label>
-                   </div>
+                <div class="input-field col s12">
+                       <input type="text" id="dataFim" name="dataFim" value="<%=sis.getDataFim()%>">
+                       <label for="dataFim">Data Fim</label>
+                </div>
                </div>
                 <div class="row">
                    <div class="input-field col s12">
-                       <input type="text" id="atividade" name="DataFim" value="<%=sis.getDataFim()%>">
-                       <label for="DataFim">Data Fim</label>
+                       <input type="text" id="atividade" name="atividade" value="<%=sis.getDataFim()%>">
+                       <label for="atividade">atividade</label>
                    </div>
                </div>
+                <div class="row">
+                <div class="col s12">
+                    <button type="submit" class="btn waves-effect waves-light">OK</button>
+                    <a href="javascript:history.go(-1);" class="btn waves-effect waves-light red right">Cancelar</a>
+                </div>
+            </div>
     </body>
 </html>

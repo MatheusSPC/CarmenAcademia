@@ -10,14 +10,16 @@
 <%
     String cod = request.getParameter("IdTurma");
     int codigoDaTurma = Integer.parseInt(cod);
-    String instrutor = request.getParameter("INSTRUTOR");
-    String dataInicio = request.getParameter("DATAINICIO");
-    String dataFim = request.getParameter("DATAFIM");
-    String atividade = request.getParameter("ATIVIDADE");
-    Turma sis = new Turma(codigoDaTurma, instrutor, dataInicio, dataFim, atividade);
+    cod = request.getParameter("IdInstrutor");
+    int codigoInstrutor = Integer.parseInt(cod);
+    String horario = request.getParameter("horario");
+    String dataInicio = request.getParameter("dataInicio");
+    String dataFim = request.getParameter("dataFim");
+    String atividade = request.getParameter("atividade");
+    Turma sis = new Turma(codigoDaTurma, codigoInstrutor, horario, dataInicio, dataFim, atividade);
     ControllerTurma siscont = new ControllerTurma();
     siscont.inserir(sis);
     // REDIRECIONA PARA A PAG LOGIN.JSP
-    String url = "inserirInstrutor.jsp";
+    String url = "inserirTurma.jsp";
     response.sendRedirect(url);
 %>
