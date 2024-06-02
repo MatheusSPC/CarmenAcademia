@@ -26,8 +26,8 @@
             </div>
             <div class="row">
                 <div class="col s12">
-                    <button type="submit" class="btn waves-effect waves-light right">Enviar</button>
-                    <a href="/WebCarmenAcademia/jsp/Menu/menu.jsp" class="btn waves-effect waves-light">Voltar</a>
+                    <button type="submit" class="btn waves-effect waves-light ">Enviar</button>
+                    <a href="/WebCarmenAcademia/jsp/Menu/menu.jsp" class="btn waves-effect waves-light right">Voltar</a>
                 </div>
             </div>
         </form>
