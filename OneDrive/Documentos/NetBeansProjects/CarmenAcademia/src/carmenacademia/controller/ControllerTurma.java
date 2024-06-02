@@ -18,7 +18,7 @@ import java.util.List;
 public class ControllerTurma {
     
     DaoTurma daoComp;
-    ControllerInstrutor contInstru;
+    ControllerTurma contInstru;
 
     
 
@@ -35,15 +35,9 @@ public class ControllerTurma {
     }
 
     public Turma buscar(Turma compEnt) throws SQLException, ClassNotFoundException {
-        
         daoComp = new DaoTurma();
-        Turma compSaida = daoComp.buscar(compEnt);
-        
-        Instrutor usu = new Instrutor(compSaida.getIdInstrutor());
-        contInstru = new ControllerInstrutor();
-        compSaida.setInstru(contInstru.buscar(usu));
-        
-        return compSaida;
+        Turma sisSaida = daoComp.buscar(compEnt);
+        return sisSaida;
     }
 
     public Turma excluir(Turma compEnt) throws SQLException, ClassNotFoundException {
