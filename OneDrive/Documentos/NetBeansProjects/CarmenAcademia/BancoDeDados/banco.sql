@@ -43,8 +43,6 @@ create table academia.Chamadas (
   primary key (idChamada));
 
 ALTER TABLE academia.Turmas ADD CONSTRAINT TURINSTRU FOREIGN KEY(idInstrutor) REFERENCES academia.Instrutores(idInstrutor);
-
-ALTER TABLE academia.Matriculas ADD CONSTRAINT MATTUR FOREIGN KEY(idTurma) REFERENCES academia.Turmas(idTurma);
 ALTER TABLE academia.Matriculas ADD CONSTRAINT MATALU FOREIGN KEY(idAluno) REFERENCES academia.Alunos(codigoDaMatricula);
 
 ALTER TABLE academia.Chamadas ADD CONSTRAINT CHAMAT FOREIGN KEY(idMatricula) REFERENCES academia.Matriculas(idMatricula);
