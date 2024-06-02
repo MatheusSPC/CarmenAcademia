@@ -7,11 +7,28 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+    <%@include file="../../inc/materalizeWeb.inc" %>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
+        <title>CONSULTAR - TURMA</title>
+        <!-- Include Materialize CSS and JS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <body>
-        <h1>Hello World!</h1>
+        <div class="container">
+            <h1 class="center-align">Consultar Turma</h1>
+            <form name="consultarTurma" action="validaConsultarTurma.jsp" method="post">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="turma" name="Turma" value="">
+                        <label for="turma">Turma</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button type="submit" class="btn waves-effect waves-light ">Enviar</button>
+                        <a href="/WebCarmenAcademia/jsp/Menu/menu.jsp" class="btn waves-effect waves-light right">Voltar</a>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
